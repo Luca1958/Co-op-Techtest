@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Co_op_Tech_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Joke" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbT-Qf-lUS">
+                                <rect key="frame" x="20" y="82" width="374" height="264"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRh-qc-yTq">
+                                <rect key="frame" x="20" y="400" width="374" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="qd1-Jd-WEt"/>
+                                </constraints>
+                                <state key="normal" title="Press for random Joke"/>
+                                <connections>
+                                    <action selector="RequestJoke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AqT-cV-C3T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8r-VW-nJ9">
+                                <rect key="frame" x="20" y="509" width="374" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="EcD-n2-UIc"/>
+                                </constraints>
+                                <state key="normal" title="Press for Custom joke"/>
+                                <connections>
+                                    <segue destination="8Yn-xr-icA" kind="modal" id="jwu-EJ-ENq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tv5-ZG-0yE">
+                                <rect key="frame" x="20" y="618" width="374" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="V5x-e5-lFA"/>
+                                </constraints>
+                                <state key="normal" title="Press for joke list"/>
+                                <connections>
+                                    <segue destination="Q9Q-V2-xNC" kind="showDetail" id="zB5-HB-F6Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tv5-ZG-0yE" firstAttribute="top" secondItem="m8r-VW-nJ9" secondAttribute="bottom" constant="8" id="400-bD-Gze"/>
+                            <constraint firstItem="dbT-Qf-lUS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="A6Z-bQ-4QS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tv5-ZG-0yE" secondAttribute="bottom" constant="55" id="CUW-KM-EM1"/>
+                            <constraint firstItem="m8r-VW-nJ9" firstAttribute="trailing" secondItem="tv5-ZG-0yE" secondAttribute="trailing" id="Gki-hW-voX"/>
+                            <constraint firstItem="LRh-qc-yTq" firstAttribute="leading" secondItem="dbT-Qf-lUS" secondAttribute="leading" id="OrK-Pb-wBu"/>
+                            <constraint firstItem="LRh-qc-yTq" firstAttribute="leading" secondItem="m8r-VW-nJ9" secondAttribute="leading" id="P7J-8b-GBh"/>
+                            <constraint firstItem="LRh-qc-yTq" firstAttribute="trailing" secondItem="m8r-VW-nJ9" secondAttribute="trailing" id="aYu-hs-jIB"/>
+                            <constraint firstItem="LRh-qc-yTq" firstAttribute="top" secondItem="dbT-Qf-lUS" secondAttribute="bottom" constant="54" id="aiz-Xv-KvH"/>
+                            <constraint firstItem="m8r-VW-nJ9" firstAttribute="top" secondItem="LRh-qc-yTq" secondAttribute="bottom" constant="8" id="bY1-bi-ADs"/>
+                            <constraint firstItem="m8r-VW-nJ9" firstAttribute="leading" secondItem="tv5-ZG-0yE" secondAttribute="leading" id="d9U-8g-yL9"/>
+                            <constraint firstItem="dbT-Qf-lUS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kMB-ya-83P"/>
+                            <constraint firstItem="dbT-Qf-lUS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="82" id="l0U-3q-n8i"/>
+                            <constraint firstItem="LRh-qc-yTq" firstAttribute="trailing" secondItem="dbT-Qf-lUS" secondAttribute="trailing" id="rTQ-Yh-UW1"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="GetJokeBtn" destination="LRh-qc-yTq" id="zxc-rw-c8Z"/>
+                        <outlet property="JokeLbl" destination="dbT-Qf-lUS" id="Y9u-20-YAv"/>
+                        <outlet property="goToCustom" destination="m8r-VW-nJ9" id="kjv-r4-iMp"/>
+                        <outlet property="goToList" destination="tv5-ZG-0yE" id="oc7-s6-8iO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-436.23188405797106" y="-211.60714285714286"/>
+        </scene>
+        <!--Joke List View Controller-->
+        <scene sceneID="ocg-bh-Pai">
+            <objects>
+                <tableViewController id="Q9Q-V2-xNC" customClass="jokeListViewController" customModule="Co_op_Tech_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5bX-Nr-dEQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="140" id="NG4-J8-PCP" customClass="JokeCell" customModule="Co_op_Tech_Test" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NG4-J8-PCP" id="85l-mG-zQI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53k-7R-XqN">
+                                            <rect key="frame" x="20" y="11" width="374" height="118"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="53k-7R-XqN" firstAttribute="bottom" secondItem="85l-mG-zQI" secondAttribute="bottomMargin" id="7xn-Qv-iBM"/>
+                                        <constraint firstItem="53k-7R-XqN" firstAttribute="trailing" secondItem="85l-mG-zQI" secondAttribute="trailingMargin" id="Lmw-R8-Tpb"/>
+                                        <constraint firstItem="53k-7R-XqN" firstAttribute="top" secondItem="85l-mG-zQI" secondAttribute="topMargin" id="n3R-2L-yCg"/>
+                                        <constraint firstItem="53k-7R-XqN" firstAttribute="leading" secondItem="85l-mG-zQI" secondAttribute="leadingMargin" id="nOx-FN-siw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="JokeLbl" destination="53k-7R-XqN" id="jrI-NA-Nxu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Q9Q-V2-xNC" id="Mb7-pF-g4I"/>
+                            <outlet property="delegate" destination="Q9Q-V2-xNC" id="Ir8-zD-mE1"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xpq-au-sWP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-480" y="516"/>
+        </scene>
+        <!--Custom Joke View Controller-->
+        <scene sceneID="dZB-ya-Yke">
+            <objects>
+                <viewController id="8Yn-xr-icA" customClass="CustomJokeViewController" customModule="Co_op_Tech_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7KY-9n-uSf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter First and Last name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gSU-8b-RAM">
+                                <rect key="frame" x="20" y="356" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7gQ-kK-Lua"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oo7-fJ-mdK">
+                                <rect key="frame" x="20" y="416" width="374" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="uEl-yo-4xQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="BtnPress:" destination="8Yn-xr-icA" eventType="touchUpInside" id="VvQ-vH-76c"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-m9-JBJ">
+                                <rect key="frame" x="20" y="158" width="374" height="190"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cFf-q5-WQ5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kBy-m9-JBJ" firstAttribute="leading" secondItem="gSU-8b-RAM" secondAttribute="leading" id="0ek-TG-aEa"/>
+                            <constraint firstItem="cFf-q5-WQ5" firstAttribute="bottom" secondItem="Oo7-fJ-mdK" secondAttribute="bottom" constant="291" id="1Tx-35-LSV"/>
+                            <constraint firstItem="kBy-m9-JBJ" firstAttribute="leading" secondItem="7KY-9n-uSf" secondAttribute="leadingMargin" id="Va8-bJ-76M"/>
+                            <constraint firstItem="gSU-8b-RAM" firstAttribute="top" secondItem="kBy-m9-JBJ" secondAttribute="bottom" constant="8" id="Wbj-wt-Vbq"/>
+                            <constraint firstItem="kBy-m9-JBJ" firstAttribute="trailing" secondItem="gSU-8b-RAM" secondAttribute="trailing" id="a78-hq-zSY"/>
+                            <constraint firstItem="kBy-m9-JBJ" firstAttribute="trailing" secondItem="7KY-9n-uSf" secondAttribute="trailingMargin" id="i76-wK-aM6"/>
+                            <constraint firstItem="gSU-8b-RAM" firstAttribute="leading" secondItem="Oo7-fJ-mdK" secondAttribute="leading" id="iId-P5-N09"/>
+                            <constraint firstItem="Oo7-fJ-mdK" firstAttribute="top" secondItem="gSU-8b-RAM" secondAttribute="bottom" constant="26" id="rzN-vf-0Nr"/>
+                            <constraint firstItem="gSU-8b-RAM" firstAttribute="trailing" secondItem="Oo7-fJ-mdK" secondAttribute="trailing" id="tKJ-fF-kfM"/>
+                            <constraint firstItem="kBy-m9-JBJ" firstAttribute="top" secondItem="cFf-q5-WQ5" secondAttribute="top" constant="102" id="xei-LI-NTn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eK0-6W-wmw"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="JokeLbl" destination="kBy-m9-JBJ" id="N0G-gN-jbj"/>
+                        <outlet property="Txtbar" destination="gSU-8b-RAM" id="Ufs-ct-nKM"/>
+                        <outlet property="searchBtn" destination="Oo7-fJ-mdK" id="u9V-El-fEm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kab-Vo-Fjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="392.75362318840581" y="-189.50892857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
